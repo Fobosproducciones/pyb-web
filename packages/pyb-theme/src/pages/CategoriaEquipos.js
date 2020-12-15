@@ -14,7 +14,9 @@ const CategoriaEquipos = ({ state }) => {
         return (
           <article key={id}>
             <Link href={equipo.link}>
-              <h3>{equipo.title.rendered}</h3>
+              <h3
+                dangerouslySetInnerHTML={{ __html: equipo.title.rendered }}
+              ></h3>
               <Featured imgID={equipo.featured_media} element="equipo" />
             </Link>
           </article>

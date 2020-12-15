@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { connect } from "frontity";
+import Base from "./Styles/Base";
 import Header from "./components/Header";
 import Equipos from "./pages/Equipos";
 import Post from "./components/Post";
 import Trabajos from "./pages/Trabajos";
 import CategoriaEquipos from "./pages/CategoriaEquipos";
 import TrabajosRealizados from "./pages/TrabajosRealizados";
+import Home from "./components/Home";
 
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
@@ -22,9 +24,9 @@ const Root = ({ state, actions }) => {
   }, []);
   return (
     <>
+      <Base />
       <Header />
-      <h1>Palo y a la Bolsa</h1>
-      {data.isHome && <p>Estamos en la home</p>}
+      {data.isHome && <Home />}
       {data.isEquipoArchive && <Equipos />}
       {data.isEquipo && <Post element="equipo" />}
       {data.isTrabajoArchive && <Trabajos />}
