@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { connect, styled, css } from "frontity";
+import { connect, styled } from "frontity";
 
 import Fondo from "../assets/fondo.png";
 import Persona from "../assets/persona6.png";
-import Letras from "../assets/letras3.png";
+
+import ServiceCardContainer from "./ServiceCardContainer";
 
 const Hero = styled.section`
   position: relative;
@@ -21,7 +22,6 @@ const Hero = styled.section`
     content: "";
     position: absolute;
     bottom: 0;
-
     background: linear-gradient(to top, #0b0b0b, transparent);
     z-index: 10000;
   }
@@ -30,31 +30,9 @@ const Hero = styled.section`
     position: absolute;
     top: 0;
     left: 0;
-
     background: #0b0b0b;
     z-index: 10000;
     mix-blend-mode: color;
-  }
-`;
-
-const Imagenletras = styled.img`
-  position: relative;
-  top: 0;
-  margin-top: 250px;
-  left: 0;
-  color: #fff;
-  width: 90%;
-  z-index: 1;
-  @media (max-width: 1300px) {
-    width: 100%;
-  }
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-  @media (max-width: 425px) {
-    margin-top: 178px;
-    width: 350px;
-    left: 10px;
   }
 `;
 
@@ -66,7 +44,7 @@ const ImagenFondo = styled.img`
   height: 100vh;
   object-fit: cover;
   pointer-events: none;
-
+  overflow: hidden;
   @media (max-width: 425px) {
     height: 800px;
     margin-top: -185px;
@@ -76,6 +54,7 @@ const ImagenFondo = styled.img`
 const Imagen = styled.img`
   position: absolute;
   top: 100;
+  overflow: hidden;
 
   object-fit: contain;
   z-index: 2;
@@ -87,6 +66,29 @@ const Imagen = styled.img`
   }
   @media (max-width: 425px) {
     right: -200px;
+  }
+`;
+
+const StyledTexto = styled.h2`
+  font-size: 3rem;
+  color: #cbcbcb;
+  position: absolute;
+  top: 0;
+  margin-top: 150px;
+  letter-spacing: 1rem;
+  font-weight: 300;
+  font-family: "Hikou Outline";
+  & span {
+    font-family: "Hikou Regular";
+    color: #cbcbcb;
+  }
+  @media (max-width: 425px) {
+    font-size: 1.8rem;
+    width: 70%;
+    margin-top: 275px;
+    margin-left: 2px;
+    letter-spacing: 0.5rem;
+    line-height: 2.5rem;
   }
 `;
 
@@ -115,25 +117,12 @@ const Home = () => {
         <ImagenFondo src={Fondo} alt="fondo" id="fondo"></ImagenFondo>
 
         <Imagen src={Persona} alt="persona" id="persona"></Imagen>
-
-        <Imagenletras src={Letras} id="text"></Imagenletras>
+        <StyledTexto id="text">
+          Hagamos que tus ideas <br /> <span>suenen bien </span>
+        </StyledTexto>
       </Hero>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
-      <h1>Contenido</h1>
+
+      <ServiceCardContainer />
     </>
   );
 };

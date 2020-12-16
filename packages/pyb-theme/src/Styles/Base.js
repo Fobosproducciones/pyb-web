@@ -1,9 +1,11 @@
 import React from "react";
 import { Global, css } from "frontity";
 import bootstrapGlobalStyles from "bootstrap/dist/css/bootstrap.min.css";
-
+import BarlowCondensed from "./Fonts/BarlowCondensed-Regular.ttf";
+import HikouFont from "./Fonts/HikouOutline.ttf";
+import HikouRegular from "./Fonts/Hikou-Regular.ttf";
 const Base = () => {
-  const mainBlack = "#0b0b0b";
+  const mainBlack = "#030303";
   const mainBlue = "#39847e";
   const mainWhite = "#FFFFFF";
   const mainGrey = "#cbcbcb";
@@ -13,16 +15,28 @@ const Base = () => {
       <Global styles={bootstrapGlobalStyles} />
       <Global
         styles={css`
+          @font-face {
+            font-family: "Barlow Condensed";
+            src: url("${BarlowCondensed}") format("truetype");
+          }
+          @font-face {
+            font-family: "Hikou Outline";
+            src: url("${HikouFont}") format("truetype");
+          }
+          @font-face {
+            font-family: "Hikou Regular";
+            src: url("${HikouRegular}") format("truetype");
+          }
           html {
             font-size: 62.5%;
           }
           body {
-            background-color: black;
+            background-color: ${mainBlack};
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Montserrat", sans-serif;
-            font-family: "Space Mono", monospace;
+            font-family: "Barlow Condensed", sans-serif;
+            font-family: "JetBrains Mono", monospace;
           }
           a {
             text-decoration: none;

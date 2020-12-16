@@ -5,11 +5,10 @@ import Logo from "../assets/logopyb.png";
 import MenuButton from "./MenuButton";
 
 const NavigationBar = styled.nav`
-  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 95%;
+  width: 90%;
   margin: 2rem auto;
   position: relative;
 `;

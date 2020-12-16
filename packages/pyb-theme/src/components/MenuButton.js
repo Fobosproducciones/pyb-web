@@ -12,6 +12,7 @@ const StyledMenuButton = styled.button`
   font-size: 2.4rem;
   overflow: hidden;
   display: none;
+  z-index: 50;
 
   @media (max-width: 600px) {
     display: flex;

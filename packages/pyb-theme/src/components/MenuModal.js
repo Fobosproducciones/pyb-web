@@ -6,7 +6,7 @@ const Ul = styled.ul`
   list-style: none;
   display: none;
   flex-flow: row nowrap;
-  font-family: "Space Mono", monospace;
+
   letter-spacing: 0.1rem;
   color: #cbcbcb;
   overflow: hidden;
@@ -15,15 +15,15 @@ const Ul = styled.ul`
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    align-items: flex-end;
-    background-color: rgb(0, 0, 0, 0.5);
-    position: fixed;
 
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    overflow: hidden;
+    transform: ${({ open }) => (open ? "translateY(10%)" : "translateY(0)")};
     opacity: ${({ open }) => (open ? 1 : 0)};
-    margin-right: 1rem;
-    top: 100px;
-    right: 0;
+    padding-right: 5rem;
+    top: 70px;
+    right: -15px;
     height: 150px;
     width: 100px;
 
