@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { connect, styled } from "frontity";
 
 import Fondo from "../assets/fondo.png";
-import Persona from "../assets/persona6.png";
-
+import Persona from "../assets/persona7-1.png";
+import Flechas from "../assets/flechas.png";
 import ServiceCardContainer from "./ServiceCardContainer";
+import GearIconsContainer from "./GearIconsContainer";
 
 const Hero = styled.section`
   position: relative;
@@ -78,6 +79,11 @@ const StyledTexto = styled.h2`
   letter-spacing: 1rem;
   font-weight: 300;
   font-family: "Hikou Outline";
+  & img {
+    width: 15px;
+    margin-left: 70px;
+    margin-top: 5px;
+  }
   & span {
     font-family: "Hikou Regular";
     color: #cbcbcb;
@@ -86,7 +92,7 @@ const StyledTexto = styled.h2`
     font-size: 1.8rem;
     width: 70%;
     margin-top: 275px;
-    margin-left: 2px;
+    margin-right: 25px;
     letter-spacing: 0.5rem;
     line-height: 2.5rem;
   }
@@ -119,10 +125,12 @@ const Home = () => {
         <Imagen src={Persona} alt="persona" id="persona"></Imagen>
         <StyledTexto id="text">
           Hagamos que tus ideas <br /> <span>suenen bien </span>
+          <img src={Flechas} alt="flechas hacia abajo"></img>
         </StyledTexto>
       </Hero>
 
       <ServiceCardContainer />
+      <GearIconsContainer />
     </>
   );
 };

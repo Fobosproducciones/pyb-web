@@ -4,6 +4,8 @@ import bootstrapGlobalStyles from "bootstrap/dist/css/bootstrap.min.css";
 import BarlowCondensed from "./Fonts/BarlowCondensed-Regular.ttf";
 import HikouFont from "./Fonts/HikouOutline.ttf";
 import HikouRegular from "./Fonts/Hikou-Regular.ttf";
+import RobotoRegular from "./Fonts/RobotoCondensed-Regular.ttf";
+import RobotoLight from "./Fonts/RobotoCondensed-Light.ttf";
 const Base = () => {
   const mainBlack = "#030303";
   const mainBlue = "#39847e";
@@ -26,6 +28,14 @@ const Base = () => {
           @font-face {
             font-family: "Hikou Regular";
             src: url("${HikouRegular}") format("truetype");
+          }
+          @font-face {
+            font-family: "Roboto Regular";
+            src: url("${RobotoRegular}") format("truetype");
+          }
+          @font-face {
+            font-family: "Roboto Light";
+            src: url("${RobotoLight}") format("truetype");
           }
           html {
             font-size: 62.5%;

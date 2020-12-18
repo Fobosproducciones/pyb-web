@@ -6,11 +6,16 @@ const Ul = styled.ul`
   list-style: none;
   display: none;
   flex-flow: row nowrap;
-
+  font-family: "Roboto Regular";
   letter-spacing: 0.1rem;
   color: #cbcbcb;
   overflow: hidden;
-
+  & a {
+    border-bottom: 1px solid #39847e;
+  }
+  & img {
+    width: 10px;
+  }
   @media (max-width: 600px) {
     display: flex;
     flex-flow: column nowrap;
@@ -22,7 +27,7 @@ const Ul = styled.ul`
     transform: ${({ open }) => (open ? "translateY(10%)" : "translateY(0)")};
     opacity: ${({ open }) => (open ? 1 : 0)};
     padding-right: 5rem;
-    top: 70px;
+    top: 60px;
     right: -15px;
     height: 150px;
     width: 100px;
@@ -38,7 +43,7 @@ const MenuModal = ({ open }) => {
       <Link href="/trabajos">Trabajos</Link>
       <Link href="/equipos">Equipos</Link>
       <Link href="">Contacto</Link>
-      <Link href="">El Estudio</Link>
+      <Link href="">Estudio</Link>
     </Ul>
   );
 };

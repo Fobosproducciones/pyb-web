@@ -8,6 +8,7 @@ import Trabajos from "./pages/Trabajos";
 import CategoriaEquipos from "./pages/CategoriaEquipos";
 import TrabajosRealizados from "./pages/TrabajosRealizados";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
@@ -33,6 +34,7 @@ const Root = ({ state, actions }) => {
       {data.isTrabajo && <Post element="trabajo" />}
       {data.isCategoria && <CategoriaEquipos />}
       {data.isRealizado && <TrabajosRealizados />}
+      <Footer />
     </>
   );
 };
