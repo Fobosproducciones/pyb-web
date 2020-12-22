@@ -30,12 +30,14 @@ const CardsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-gap: 1px;
+  grid-gap: 40px;
   width: 90%;
   justify-items: center;
   overflow: hidden;
   background: url(${Cuerdas});
-  background-position: 50%;
+  background-position: center 110%;
+  background-size: 80%;
+
   @media (max-width: 1025px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -56,9 +58,8 @@ const StyledText = styled.h2`
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 20px auto 0;
+  margin: 20px auto 40px;
   font-family: "Hikou Regular";
-
   text-shadow: -3px 1px 2px black;
   z-index: 50;
   @media (max-width: 425px) {

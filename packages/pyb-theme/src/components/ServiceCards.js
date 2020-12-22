@@ -10,6 +10,7 @@ const ServiceCards = (props) => {
           <CardTitle>
             <span> {props.title}</span>
           </CardTitle>
+
           <img src={props.icono}></img>
           <p>{props.description}</p>
         </Card>
@@ -19,14 +20,13 @@ const ServiceCards = (props) => {
 };
 
 const CardTitle = styled.h4`
-  font-family: "Hikou Regular";
-  font-size: 1.2rem;
+  font-family: "Hikou Outline";
+  font-size: 1.8rem;
   letter-spacing: 0.6rem;
-  width: 70%;
   text-align: center;
-  margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 5px black;
-
+  justify-self: center;
+  margin: 0 auto 0.7rem;
+  text-shadow: 1px 1px 1px black;
   z-index: 5;
 `;
 
@@ -39,15 +39,12 @@ const Card = styled.figure`
   width: 190px;
   height: 120px;
   opacity: 0.9;
-  margin-top: 40px;
-
   background: ${(props) => `url(${props.background}) no-repeat top center,`};
-
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 480px;
   border-radius: 10px;
-  border: 1px solid #39847e;
+  border: 2px solid #39847e;
   box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.8),
     inset 0px 0px 7px 5px rgba(0, 0, 0, 0.6);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -82,24 +79,28 @@ const Card = styled.figure`
     display: flex;
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
   }
   &:hover {
-    justify-content: center;
+    justify-content: flex-end;
     & p {
       display: flex;
       z-index: 3;
       color: #cbcbcb;
-      font-size: 1rem;
-      font-family: "Roboto Regular";
+      opacity: 0.6;
+      font-size: 0.7rem;
+      font-family: "Hikou Regular";
+      letter-spacing: 0.22rem;
+      text-align: center;
     }
     & img {
       display: flex;
-      width: 40px;
+      justify-self: center;
+      align-self: center;
+      margin-bottom: 27px;
+      width: 30px;
       z-index: 3;
-      margin: auto;
-      margin-bottom: 20px;
+      opacity: 0.8;
     }
 
     & h4 {

@@ -9,20 +9,16 @@ const Trabajos = ({}) => {
       <h2>Trabajos</h2>
       <p>Estos son los trabajos que hemos realizado.</p>
       <Link href="/realizado/produccion">
-        {" "}
-        <p>Produccion</p>{" "}
+        <p>Produccion</p>
       </Link>
       <Link href="/realizado/mezcla">
-        {" "}
-        <p>Mezcla</p>{" "}
+        <p>Mezcla</p>
       </Link>
       <Link href="/realizado/grabacion">
-        {" "}
-        <p>Grabacion</p>{" "}
+        <p>Grabacion</p>
       </Link>
       <Link href="/realizado/master">
-        {" "}
-        <p>Mastering</p>{" "}
+        <p>Mastering</p>
       </Link>
     </>
   );

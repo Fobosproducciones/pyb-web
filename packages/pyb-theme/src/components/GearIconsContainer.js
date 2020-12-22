@@ -9,6 +9,7 @@ import Link from "./Link";
 const Container = styled.div`
   background-color: #343434;
   height: 250px;
+  padding-top: 20px;
 `;
 
 const StyledText = styled.h2`
@@ -45,15 +46,18 @@ const IconsContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin: 25px auto;
-  width: 70%;
+  margin: 40px auto 0px;
+  width: 80%;
 `;
 
 const StyledIcons = styled.img`
   height: 40px;
   opacity: 0.6;
   transition: all 0.2s;
+
   & :hover {
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(129deg)
+      brightness(100%) contrast(90%);
     height: 60px;
   }
 `;
@@ -68,12 +72,15 @@ const StyledItems = styled.div`
     margin-top: 10px;
     display: flex;
     color: #cbcbcb;
-    font-family: "Roboto Regular";
+    font-family: "Hikou Outline";
     font-size: 1rem;
+    letter-spacing: 0.1rem;
   }
   & :hover {
     height: 60px;
+
     & p {
+      font-family: "Hikou Regular";
       color: #39847e;
     }
   }
