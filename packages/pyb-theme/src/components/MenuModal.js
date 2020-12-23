@@ -5,45 +5,51 @@ import Link from "./Link";
 const Ul = styled.ul`
   list-style: none;
   display: none;
-  flex-flow: row nowrap;
-  font-family: "Roboto Regular";
+  font-family: "Hikou Regular";
   letter-spacing: 0.1rem;
-  color: #cbcbcb;
   overflow: hidden;
-  & a {
-    border-bottom: 1px solid #39847e;
-  }
-  & img {
-    width: 10px;
-  }
-  @media (max-width: 600px) {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
 
-    background-color: rgb(0, 0, 0, 0.5);
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
+    letter-spacing: 0.15rem;
+    display: flex;
+    flex-flow: column;
+    text-align: right;
     position: absolute;
     overflow: hidden;
     transform: ${({ open }) => (open ? "translateY(10%)" : "translateY(0)")};
     opacity: ${({ open }) => (open ? 1 : 0)};
-    padding-right: 5rem;
     top: 60px;
-    right: -15px;
+    right: 1px;
     height: 150px;
     width: 100px;
-
     z-index: 50;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+    & li {
+      margin: 8px 0 10px;
+    }
+  }
+  & a:hover {
+    color: #39847e;
   }
 `;
 
 const MenuModal = ({ open }) => {
   return (
     <Ul open={open}>
-      <Link href="/trabajos">Trabajos</Link>
-      <Link href="/equipos">Equipos</Link>
-      <Link href="">Contacto</Link>
-      <Link href="">Estudio</Link>
+      <li>
+        <a href="/#trabajos">Trabajos</a>
+      </li>
+      <li>
+        <a href="/#equipos">Equipos</a>
+      </li>
+      <li>
+        <Link href="/contacto">Contacto</Link>
+      </li>
+      <li>
+        <Link href="">Estudio</Link>
+      </li>
     </Ul>
   );
 };

@@ -34,6 +34,7 @@ const Root = ({ state, actions }) => {
       {data.isTrabajo && <Post element="trabajo" />}
       {data.isCategoria && <CategoriaEquipos />}
       {data.isRealizado && <TrabajosRealizados />}
+      {data.isPage && <Post element="contacto" />}
       <Footer />
     </>
   );

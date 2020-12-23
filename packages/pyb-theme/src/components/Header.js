@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, styled, css } from "frontity";
+import { connect, styled } from "frontity";
 import Link from "./Link";
 import Logo from "../assets/logopyb.png";
 import MenuButton from "./MenuButton";
@@ -27,6 +27,11 @@ const NavigationContentRight = styled.div`
   & a {
     font-size: 1.4rem;
     padding-left: 2.4rem;
+    font-family: "Hikou Regular";
+    letter-spacing: 0.3rem;
+    :hover {
+      color: #39847e;
+    }
   }
   @media (max-width: 600px) {
     display: none;
@@ -43,10 +48,10 @@ const Header = () => {
           </Link>
         </NavigationContentLeft>
         <NavigationContentRight>
-          <Link href="/trabajos">Trabajos</Link>
-          <Link href="/equipos">Equipos</Link>
-          <Link href="">Contacto</Link>
-          <Link href="">El Estudio</Link>
+          <a href="/#trabajos">Trabajos</a>
+          <a href="/#equipos">Equipos</a>
+          <Link href="/contacto">Contacto</Link>
+          <Link href="/estudio">El Estudio</Link>
         </NavigationContentRight>
         <MenuButton />
       </NavigationBar>

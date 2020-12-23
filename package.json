@@ -28,6 +28,7 @@
     "@frontity/wp-source": "^1.10.0",
     "bootstrap": "^5.0.0-beta1",
     "frontity": "^1.13.0",
+    "frontity-contact-form-7": "^0.1.7",
     "pyb-theme": "file:packages/pyb-theme",
     "reactstrap": "^8.7.1"
   }

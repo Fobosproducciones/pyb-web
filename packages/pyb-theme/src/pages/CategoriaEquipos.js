@@ -4,10 +4,12 @@ import Featured from "../components/Featured";
 import Link from "../components/Link";
 
 const EquiposContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  width: 100%;
+  justify-items: center;
+  overflow: hidden;
   background: linear-gradient(
     176deg,
     rgba(3, 3, 3, 1) 0%,
@@ -36,11 +38,11 @@ const StyledP = styled.p`
   font-family: "Hikou Regular";
   letter-spacing: 0.22rem;
   text-align: center;
+  width: 70%;
+  justify-content: center;
 `;
 
 const StyledArticle = styled.article`
-  margin-top: 25px;
-
   :hover {
     & h4 {
       transform: translate(0, -0.5px);
@@ -98,15 +100,15 @@ const CardTitle = styled.h4`
 
 const CardSpan = styled.p`
   font-family: "Hikou Regular";
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   letter-spacing: 0.15rem;
-  color: white;
-  width: 60%;
+  color: #39847e;
+  width: 50%;
   text-align: center;
   transition: all 0.3s ease-out;
   margin: 0 auto;
   padding: 5px 0;
-  background-color: #39847e;
+  background-color: #cbcbcb;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   position: relative;

@@ -129,8 +129,12 @@ const Home = () => {
         </StyledTexto>
       </Hero>
 
-      <ServiceCardContainer />
-      <GearIconsContainer />
+      <a id="trabajos">
+        <ServiceCardContainer />
+      </a>
+      <a id="equipos">
+        <GearIconsContainer />
+      </a>
     </>
   );
 };
