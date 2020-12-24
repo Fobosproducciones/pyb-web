@@ -121,7 +121,7 @@ const StyledPostsContainer = styled.div`
 
   overflow: hidden;
   background: linear-gradient(
-    176deg,
+    180deg,
     rgba(3, 3, 3, 1) 0%,
     rgba(52, 52, 52, 1) 100%
   );
@@ -129,21 +129,18 @@ const StyledPostsContainer = styled.div`
 
 const StyledPostTitle = styled.h3`
   font-size: 2rem;
+  width: 70%;
   color: #39847e;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
+  line-height: 2rem;
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 20px auto 1px;
   font-family: "Hikou Regular";
   text-shadow: -3px 1px 2px black;
   z-index: 50;
   @media (max-width: 425px) {
-    font-size: 2rem;
-    width: 70%;
-    letter-spacing: 0.5rem;
-    line-height: 2rem;
-    margin: 20px auto 1px;
   }
 `;
 
@@ -161,10 +158,30 @@ const StyledPostImg = styled.div`
   border-radius: 10px;
   border: 3px solid #39847e;
   box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.8);
-
   overflow: hidden;
   & img {
     width: 140px;
+    @media (min-width: 559px) {
+      width: 200px;
+    }
+    @media (min-width: 1000px) {
+      width: 200px;
+    }
+    @media (min-width: 1200px) {
+      width: 200px;
+    }
+  }
+  @media (min-width: 559px) {
+    width: 350px;
+    height: 200px;
+  }
+  @media (min-width: 1000px) {
+    width: 400px;
+    height: 225px;
+  }
+  @media (min-width: 1200px) {
+    width: 500px;
+    height: 250px;
   }
 `;
 
@@ -173,17 +190,38 @@ const StyledPostP = styled.div`
   font-size: 1.3rem;
   margin: 30px auto 10px;
   text-align: center;
-
   opacity: 0.8;
   width: 65%;
   font-family: "Roboto Regular";
   & iframe {
-    width: 100%;
-    height: 150%;
+    width: 210px;
+    height: 120px;
     border-radius: 10px;
-    margin-top: -25px;
-    margin-bottom: 25px;
+    margin-top: -5px;
+    margin-bottom: 10px;
     border: 3px solid #39847e;
+    @media (min-width: 559px) {
+      width: 350px;
+      height: 200px;
+      margin-bottom: 30px;
+      margin-top: 20px;
+    }
+    @media (min-width: 1000px) {
+      width: 400px;
+      height: 225px;
+    }
+    @media (min-width: 1200px) {
+      width: 500px;
+      height: 250px;
+    }
+  }
+  @media (min-width: 559px) {
+    font-size: 1.5rem;
+    margin: 30px auto 30px;
+  }
+  @media (min-width: 1000px) {
+  }
+  @media (min-width: 1200px) {
   }
 `;
 const StyledWave = styled.img`

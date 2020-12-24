@@ -10,7 +10,6 @@ const ServiceCards = (props) => {
           <CardTitle>
             <span> {props.title}</span>
           </CardTitle>
-
           <img src={props.icono}></img>
           <p>{props.description}</p>
         </Card>
@@ -28,6 +27,9 @@ const CardTitle = styled.h4`
   margin: 0 auto 0.7rem;
   text-shadow: 1px 1px 1px black;
   z-index: 5;
+  @media (min-width: 400px) {
+    font-size: 2.3rem;
+  }
 `;
 
 const Card = styled.figure`
@@ -55,7 +57,6 @@ const Card = styled.figure`
   & p {
     display: none;
   }
-
   &:before,
   &:after {
     position: absolute;
@@ -92,6 +93,9 @@ const Card = styled.figure`
       font-family: "Hikou Regular";
       letter-spacing: 0.22rem;
       text-align: center;
+      @media (min-width: 400px) {
+        font-size: 1.2rem;
+      }
     }
     & img {
       display: flex;
@@ -101,12 +105,14 @@ const Card = styled.figure`
       width: 30px;
       z-index: 3;
       opacity: 0.8;
+      @media (min-width: 400px) {
+        width: 50px;
+        margin-bottom: 38px;
+      }
     }
-
     & h4 {
       display: none;
     }
-
     background-size: 210%;
     &:after {
       background-color: rgba(0, 0, 0, 0.9);
@@ -114,10 +120,13 @@ const Card = styled.figure`
       font-size: 72px;
       z-index: 2;
     }
-
     & figcaption {
       transform: translateY(-110%);
     }
+  }
+  @media (min-width: 400px) {
+    width: 250px;
+    height: 158px;
   }
 `;
 

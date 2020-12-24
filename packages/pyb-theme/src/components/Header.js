@@ -25,7 +25,7 @@ const NavigationContentLeft = styled.div`
 
 const NavigationContentRight = styled.div`
   & a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding-left: 2.4rem;
     font-family: "Hikou Regular";
     letter-spacing: 0.3rem;
@@ -33,6 +33,7 @@ const NavigationContentRight = styled.div`
       color: #39847e;
     }
   }
+
   @media (max-width: 600px) {
     display: none;
   }

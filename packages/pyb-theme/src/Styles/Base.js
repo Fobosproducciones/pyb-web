@@ -50,7 +50,6 @@ const Base = () => {
           }
           a {
             text-decoration: none;
-
             color: ${mainGrey};
           }
           img {

@@ -8,42 +8,68 @@ const TrabajosRealizados = ({ state }) => {
 
   return (
     <>
-      <TrabajosContainer>
+      <GeneralContainer>
         <StyledTitle>Trabajos</StyledTitle>
         <StyledP>Estos son los trabajos que hemos realizado.</StyledP>
-        {data.items.map(({ id }) => {
-          const trabajo = state.source.trabajo[id];
-          return (
-            <StyledArticle key={id}>
-              <Link href={trabajo.link}>
-                <CardTitle
-                  dangerouslySetInnerHTML={{ __html: trabajo.title.rendered }}
-                ></CardTitle>
-                <StyledImgContainer>
-                  <Featured imgID={trabajo.featured_media} element="trabajo" />
-                </StyledImgContainer>
-                <CardSpan>Escuchar</CardSpan>
-              </Link>
-            </StyledArticle>
-          );
-        })}
-      </TrabajosContainer>
+        <TrabajosContainer>
+          {data.items.map(({ id }) => {
+            const trabajo = state.source.trabajo[id];
+            return (
+              <StyledArticle key={id}>
+                <Link href={trabajo.link}>
+                  <CardTitle
+                    dangerouslySetInnerHTML={{ __html: trabajo.title.rendered }}
+                  ></CardTitle>
+                  <StyledImgContainer>
+                    <Featured
+                      imgID={trabajo.featured_media}
+                      element="trabajo"
+                    />
+                  </StyledImgContainer>
+                  <CardSpan>Escuchar</CardSpan>
+                </Link>
+              </StyledArticle>
+            );
+          })}
+        </TrabajosContainer>
+      </GeneralContainer>
     </>
   );
 };
 
-const TrabajosContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-
-  width: 100%;
-  justify-items: center;
-  overflow: hidden;
+const GeneralContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: linear-gradient(
-    176deg,
+    180deg,
     rgba(3, 3, 3, 1) 0%,
     rgba(52, 52, 52, 1) 100%
   );
+`;
+
+const TrabajosContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  justify-items: center;
+  overflow: hidden;
+
+  @media (min-width: 559px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    margin-top: 30px;
+  }
+  @media (min-width: 1000px) {
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 `;
 
 const StyledTitle = styled.h2`
@@ -54,8 +80,16 @@ const StyledTitle = styled.h2`
   color: #cbcbcb;
   justify-self: center;
   margin: 0 auto 0.7rem;
-
   z-index: 5;
+  @media (min-width: 400px) {
+    font-size: 2.5rem;
+    letter-spacing: 0.7rem;
+    line-height: 2.85rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+  }
 `;
 
 const StyledP = styled.p`
@@ -69,6 +103,9 @@ const StyledP = styled.p`
   letter-spacing: 0.22rem;
   text-align: center;
   width: 70%;
+  @media (min-width: 400px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const StyledArticle = styled.article`
@@ -100,11 +137,21 @@ const StyledImgContainer = styled.div`
   border-radius: 10px;
   border: 3px solid #39847e;
   box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.8);
-
   overflow: hidden;
   & img {
     filter: grayscale();
     width: 220px;
+  }
+  @media (min-width: 559px) {
+    width: 250px;
+    height: 158px;
+    & img {
+      width: 300px;
+    }
+  }
+  @media (min-width: 1000px) {
+  }
+  @media (min-width: 1200px) {
   }
 `;
 

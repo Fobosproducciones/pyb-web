@@ -20,7 +20,7 @@ const GridCardsContainer = styled.div`
   margin: 0 auto;
 
   background: linear-gradient(
-    176deg,
+    180deg,
     rgba(3, 3, 3, 1) 0%,
     rgba(52, 52, 52, 1) 100%
   );
@@ -28,33 +28,41 @@ const GridCardsContainer = styled.div`
 
 const CardsGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 40px;
-  width: 90%;
+  width: 100%;
+  height: 100%;
   justify-items: center;
   overflow: hidden;
   background: url(${Cuerdas});
   background-position: center 110%;
   background-size: 80%;
 
-  @media (max-width: 1025px) {
+  @media (min-width: 559px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    background: none;
+    width: 80%;
+    margin-top: 30px;
   }
-
-  @media (max-width: 426px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 100%;
-    width: 100%;
+  @media (min-width: 1000px) {
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 90%;
   }
 `;
 
 const StyledText = styled.h2`
-  font-size: 2rem;
+  font-size: 1.4rem;
+  width: 70%;
   color: #39847e;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
+  line-height: 2rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -62,11 +70,14 @@ const StyledText = styled.h2`
   font-family: "Hikou Regular";
   text-shadow: -3px 1px 2px black;
   z-index: 50;
-  @media (max-width: 425px) {
-    font-size: 1.4rem;
-    width: 70%;
-    letter-spacing: 0.5rem;
-    line-height: 2rem;
+  @media (min-width: 400px) {
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    line-height: 2.85rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
   }
 `;
 
@@ -77,6 +88,9 @@ const StyledWave = styled.img`
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
+  @media (min-width: 400px) {
+    width: 65.7px;
+  }
 `;
 
 const ServiceCardContainer = () => {

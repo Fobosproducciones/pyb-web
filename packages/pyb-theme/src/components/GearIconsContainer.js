@@ -10,24 +10,38 @@ const Container = styled.div`
   background-color: #343434;
   height: 250px;
   padding-top: 20px;
+  @media (min-width: 400px) {
+    padding-top: 40px;
+    height: 350px;
+  }
+  @media (min-width: 559px) {
+    height: 380px;
+  }
+  @media (min-width: 1200px) {
+    height: 500px;
+  }
 `;
 
 const StyledText = styled.h2`
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #39847e;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
+  line-height: 2rem;
   text-align: center;
   justify-content: center;
   display: flex;
   margin: 0 auto;
   padding-top: 10px;
   font-family: "Hikou Regular";
-
-  @media (max-width: 425px) {
-    font-size: 1.4rem;
-    width: 70%;
-    letter-spacing: 0.5rem;
-    line-height: 2rem;
+  width: 70%;
+  @media (min-width: 400px) {
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    line-height: 2.85rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
   }
 `;
 
@@ -39,6 +53,9 @@ const StyledWave = styled.img`
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
+  @media (min-width: 400px) {
+    width: 65.7px;
+  }
 `;
 
 const IconsContainer = styled.div`
@@ -46,8 +63,11 @@ const IconsContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin: 40px auto 0px;
-  width: 80%;
+  margin: 40px auto 30px;
+  width: 85%;
+  @media (min-width: 400px) {
+    margin-top: 50px;
+  }
 `;
 
 const StyledIcons = styled.img`
@@ -59,6 +79,18 @@ const StyledIcons = styled.img`
     filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(129deg)
       brightness(100%) contrast(90%);
     height: 60px;
+  }
+  @media (min-width: 400px) {
+    height: 60px;
+    & :hover {
+      height: 80px;
+    }
+  }
+  @media (min-width: 559px) {
+    height: 85px;
+  }
+  @media (min-width: 1200px) {
+    height: 120px;
   }
 `;
 
@@ -75,9 +107,19 @@ const StyledItems = styled.div`
     font-family: "Hikou Outline";
     font-size: 1rem;
     letter-spacing: 0.1rem;
+    @media (min-width: 400px) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 559px) {
+      font-size: 2rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 2rem;
+    }
   }
   & :hover {
-    height: 60px;
+    height: 80px;
 
     & p {
       font-family: "Hikou Regular";
