@@ -17,7 +17,7 @@ const Post = ({ state, element, libraries }) => {
           <StyledPostP
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
           ></StyledPostP>
-          <StyledWave src={SoundWave}></StyledWave>
+          <StyledWave2 src={SoundWave}></StyledWave2>
         </StyledPostsContainer>
       </>
     );
@@ -33,7 +33,7 @@ const Post = ({ state, element, libraries }) => {
           <StyledPostP
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
           ></StyledPostP>
-          <StyledWave src={SoundWave}></StyledWave>
+          <StyledWave2 src={SoundWave}></StyledWave2>
         </StyledPostsContainer>
       </>
     );
@@ -50,7 +50,14 @@ const Post = ({ state, element, libraries }) => {
           <StyledContact>
             <Html2react html={post.content.rendered} />
           </StyledContact>
-          <StyledWave src={SoundWave}></StyledWave>
+          <StyledPostP2>
+            Dirección: Alberto Cevey y Osvaldo Magnasco, Larroque, Entre Ríos.{" "}
+            <br />
+            Teléfono: (03446) 15640384
+            <br />
+            E-mail: paloyalabolsaproducciones@gmail.com
+          </StyledPostP2>
+          <StyledWave2 src={SoundWave}></StyledWave2>
         </StyledPostsContainer>
       </>
     );
@@ -120,11 +127,6 @@ const StyledPostsContainer = styled.div`
   width: 100%;
 
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    rgba(3, 3, 3, 1) 0%,
-    rgba(52, 52, 52, 1) 100%
-  );
 `;
 
 const StyledPostTitle = styled.h3`
@@ -185,6 +187,16 @@ const StyledPostImg = styled.div`
   }
 `;
 
+const StyledPostP2 = styled.div`
+  color: #cbcbcb;
+  font-size: 1.2rem;
+  margin: 30px auto 10px;
+  text-align: center;
+  opacity: 0.7;
+  width: 65%;
+  font-family: "Roboto Regular";
+`;
+
 const StyledPostP = styled.div`
   color: #cbcbcb;
   font-size: 1.3rem;
@@ -224,12 +236,27 @@ const StyledPostP = styled.div`
   @media (min-width: 1200px) {
   }
 `;
+
+const StyledWave2 = styled.img`
+  width: 50px;
+  display: flex;
+  margin: 40px auto;
+
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  @media (min-width: 1000px) {
+    padding-bottom: 100px;
+  }
+`;
+
 const StyledWave = styled.img`
   width: 50px;
   display: flex;
   margin: 40px auto;
   justify-content: center;
   align-items: center;
+  opacity: 0.7;
 `;
 
 export default connect(Post);

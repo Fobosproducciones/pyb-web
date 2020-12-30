@@ -9,6 +9,7 @@ import CategoriaEquipos from "./pages/CategoriaEquipos";
 import TrabajosRealizados from "./pages/TrabajosRealizados";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import ErrorPage from "./pages/ErrorPage";
 
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
@@ -22,6 +23,7 @@ const Root = ({ state, actions }) => {
     actions.source.fetch("/realizado/mezcla");
     actions.source.fetch("/realizado/grabacion");
     actions.source.fetch("/realizado/master");
+    actions.source.fetch("/contacto");
   }, []);
   return (
     <>
@@ -35,7 +37,7 @@ const Root = ({ state, actions }) => {
       {data.isCategoria && <CategoriaEquipos />}
       {data.isRealizado && <TrabajosRealizados />}
       {data.isPage && <Post element="contacto" />}
-
+      {data.is404 && <ErrorPage />}
       <Footer />
     </>
   );

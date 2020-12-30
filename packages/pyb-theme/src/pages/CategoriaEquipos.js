@@ -139,11 +139,6 @@ const GeneralContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(
-    180deg,
-    rgba(3, 3, 3, 1) 0%,
-    rgba(52, 52, 52, 1) 100%
-  );
 `;
 
 const CategoriaEquipos = ({ state }) => {

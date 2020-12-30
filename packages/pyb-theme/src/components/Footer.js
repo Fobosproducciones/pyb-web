@@ -5,7 +5,6 @@ import FootHd from "../assets/foot10.png";
 import YTLogo from "../assets/youtube.png";
 import FBLogo from "../assets/facebook.png";
 import INSTLogo from "../assets/instagram.png";
-import Logo from "../assets/logo.png";
 
 const FooterContainer = styled.div`
   height: 150px;
@@ -80,29 +79,15 @@ const SocialContainer = styled.div`
   }
 `;
 
-const StyledLogo = styled.img`
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: 1000px) {
-    display: flex;
-    width: 150px;
-    top: 1930px;
-  }
-  @media (min-width: 1600px) {
-    top: 2075px;
-    width: 250px;
-  }
-`;
-
 const StyledP = styled.p`
   margin-top: 25px;
-  font-family: "Roboto Light";
+  font-family: "Hikou Regular";
   color: #cbcbcb;
+  opacity: 0.6;
+  @media (min-width: 1000px) {
+    margin-bottom: 150px;
+    margin-top: -80px;
+  }
 `;
 
 const Footer = () => {
@@ -122,7 +107,6 @@ const Footer = () => {
         </SocialContainer>
         <StyledP>Palo Y A La Bolsa © 2020 by Fobos</StyledP>
       </FooterContainer>
-      <StyledLogo src={Logo}></StyledLogo>
     </>
   );
 };

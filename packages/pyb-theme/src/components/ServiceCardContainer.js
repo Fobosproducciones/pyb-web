@@ -48,6 +48,7 @@ const CardsGrid = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     width: 90%;
+    margin-top: 80px;
   }
 `;
 
