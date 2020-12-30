@@ -1,10 +1,11 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Foot from "../assets/foot4.png";
-import FootHd from "../assets/foot6.png";
+import FootHd from "../assets/foot10.png";
 import YTLogo from "../assets/youtube.png";
 import FBLogo from "../assets/facebook.png";
 import INSTLogo from "../assets/instagram.png";
+import Logo from "../assets/logo.png";
 
 const FooterContainer = styled.div`
   height: 150px;
@@ -17,12 +18,7 @@ const FooterContainer = styled.div`
   background: url(${Foot}) no-repeat;
   background-size: 430px;
   background-position-x: center;
-  & p {
-    margin-top: 25px;
-    font-family: "Roboto Light";
-    color: #cbcbcb;
-    font-size: 0.5rem;
-  }
+
   @media (min-width: 400px) {
     background-size: 565px;
     height: 197px;
@@ -40,21 +36,24 @@ const FooterContainer = styled.div`
     background: url(${FootHd}) no-repeat;
     background-size: 1200px;
     background-position-x: center;
-    height: 300px;
+    height: 200px;
     padding-top: 120px;
+    margin-top: -100px;
   }
   @media (min-width: 1200px) {
     background: url(${FootHd}) no-repeat;
 
     background-position-x: center;
     background-size: 1500px;
-    height: 400px;
-    padding-top: 170px;
+    height: 200px;
+    padding-top: 150px;
+    margin-top: -100px;
   }
   @media (min-width: 1600px) {
     background-size: 2100px;
-    height: 500px;
-    padding-top: 230px;
+    height: 300px;
+    padding-top: 150px;
+    margin-top: -200px;
   }
 `;
 
@@ -76,33 +75,54 @@ const SocialContainer = styled.div`
     }
     @media (min-width: 1000px) {
       width: 40px;
+      padding-bottom: 110px;
     }
   }
 `;
 
-const GeneralBack = styled.div`
-  background-color: #343434;
+const StyledLogo = styled.img`
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 1000px) {
+    display: flex;
+    width: 150px;
+    top: 1930px;
+  }
+  @media (min-width: 1600px) {
+    top: 2075px;
+    width: 250px;
+  }
+`;
+
+const StyledP = styled.p`
+  margin-top: 25px;
+  font-family: "Roboto Light";
+  color: #cbcbcb;
 `;
 
 const Footer = () => {
   return (
     <>
-      <GeneralBack>
-        <FooterContainer>
-          <SocialContainer>
-            <a href="https://www.youtube.com/channel/UCwAvjMgmOdfvriY8SmpbHjQ">
-              <img src={YTLogo}></img>
-            </a>
-            <a href="https://www.facebook.com/paloyalabolsaproducciones">
-              <img src={FBLogo}></img>
-            </a>
-            <a href="https://www.instagram.com/paloyalabolsaestudio/">
-              <img src={INSTLogo}></img>
-            </a>
-          </SocialContainer>
-          <p>Fobos © 2020</p>
-        </FooterContainer>
-      </GeneralBack>
+      <FooterContainer>
+        <SocialContainer>
+          <a href="https://www.youtube.com/channel/UCwAvjMgmOdfvriY8SmpbHjQ">
+            <img src={YTLogo}></img>
+          </a>
+          <a href="https://www.facebook.com/paloyalabolsaproducciones">
+            <img src={FBLogo}></img>
+          </a>
+          <a href="https://www.instagram.com/paloyalabolsaestudio/">
+            <img src={INSTLogo}></img>
+          </a>
+        </SocialContainer>
+        <StyledP>Palo Y A La Bolsa © 2020 by Fobos</StyledP>
+      </FooterContainer>
+      <StyledLogo src={Logo}></StyledLogo>
     </>
   );
 };

@@ -159,7 +159,7 @@ const StyledPostImg = styled.div`
   border: 3px solid #39847e;
   box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  & img {
+  & img:first-of-type {
     width: 140px;
     @media (min-width: 559px) {
       width: 200px;
@@ -193,7 +193,7 @@ const StyledPostP = styled.div`
   opacity: 0.8;
   width: 65%;
   font-family: "Roboto Regular";
-  & iframe {
+  & iframe:first-of-type {
     width: 210px;
     height: 120px;
     border-radius: 10px;

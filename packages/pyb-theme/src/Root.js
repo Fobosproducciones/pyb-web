@@ -35,6 +35,7 @@ const Root = ({ state, actions }) => {
       {data.isCategoria && <CategoriaEquipos />}
       {data.isRealizado && <TrabajosRealizados />}
       {data.isPage && <Post element="contacto" />}
+
       <Footer />
     </>
   );

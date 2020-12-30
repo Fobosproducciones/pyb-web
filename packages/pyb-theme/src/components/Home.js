@@ -6,6 +6,8 @@ import Persona from "../assets/persona9.png";
 import Flechas from "../assets/flechas.png";
 import ServiceCardContainer from "./ServiceCardContainer";
 import GearIconsContainer from "./GearIconsContainer";
+import studioImage from "../assets/studioImage.png";
+import studioImageDesktop from "../assets/studioImageDesktop.png";
 
 const Hero = styled.section`
   position: relative;
@@ -89,12 +91,12 @@ const StyledTexto = styled.h2`
   line-height: 2.5rem;
   font-weight: 300;
   font-family: "Hikou Outline";
-  & img {
+  & img:first-of-type {
     width: 15px;
     margin-left: 70px;
     margin-top: 5px;
   }
-  & span {
+  & span:first-of-type {
     font-family: "Hikou Regular";
     color: #cbcbcb;
   }
@@ -125,6 +127,25 @@ const StyledTexto = styled.h2`
   }
 `;
 
+const BackImage = styled.div`
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(${studioImage});
+  overflow: hidden;
+  background-position: bottom;
+  background-size: cover;
+  @media (min-width: 880px) {
+    background-size: contain no-repeat;
+    background-position: 50%;
+  }
+  @media (min-width: 1400px) {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(${studioImageDesktop});
+    overflow: hidden;
+    background-position: bottom;
+    background-size: cover;
+  }
+`;
+
 const Home = () => {
   useEffect(function mount() {
     function onScroll() {
@@ -151,12 +172,11 @@ const Home = () => {
           <img src={Flechas} alt="flechas hacia abajo"></img>
         </StyledTexto>
       </Hero>
-      <a id="trabajos">
+      <BackImage>
         <ServiceCardContainer />
-      </a>
-      <a id="equipos">
+
         <GearIconsContainer />
-      </a>
+      </BackImage>
     </>
   );
 };

@@ -47,9 +47,6 @@ const MenuModal = ({ open }) => {
       <li>
         <Link href="/contacto">Contacto</Link>
       </li>
-      <li>
-        <Link href="">Estudio</Link>
-      </li>
     </Ul>
   );
 };

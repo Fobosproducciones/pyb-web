@@ -9,7 +9,7 @@ import Auris from "../assets/auris.png";
 import Grabadora from "../assets/grabadora.png";
 import Faders from "../assets/faders.png";
 import Master from "../assets/master.png";
-import Cuerdas from "../assets/cuerdas.png";
+
 import SoundWave from "../assets/backwave.png";
 
 const GridCardsContainer = styled.div`
@@ -18,12 +18,6 @@ const GridCardsContainer = styled.div`
   align-items: center;
   width: 100%;
   margin: 0 auto;
-
-  background: linear-gradient(
-    180deg,
-    rgba(3, 3, 3, 1) 0%,
-    rgba(52, 52, 52, 1) 100%
-  );
 `;
 
 const CardsGrid = styled.div`
@@ -35,7 +29,7 @@ const CardsGrid = styled.div`
   height: 100%;
   justify-items: center;
   overflow: hidden;
-  background: url(${Cuerdas});
+
   background-position: center 110%;
   background-size: 80%;
 
@@ -88,6 +82,7 @@ const StyledWave = styled.img`
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
+  opacity: 0.7;
   @media (min-width: 400px) {
     width: 65.7px;
   }
@@ -96,7 +91,10 @@ const StyledWave = styled.img`
 const ServiceCardContainer = () => {
   return (
     <>
-      <StyledWave src={SoundWave}></StyledWave>
+      <a id="trabajos">
+        {" "}
+        <StyledWave src={SoundWave}></StyledWave>
+      </a>
       <StyledText>
         Conocé
         <br />

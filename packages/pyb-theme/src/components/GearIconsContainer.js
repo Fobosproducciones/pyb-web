@@ -4,21 +4,25 @@ import SoundWave from "../assets/backwave.png";
 import MicLogo from "../assets/microfonia.png";
 import GuitarLogo from "../assets/guitar.png";
 import GeneralLogo from "../assets/general.png";
-import Link from "./Link";
+
+import GearIcons from "./GearIcons";
 
 const Container = styled.div`
-  background-color: #343434;
-  height: 250px;
-  padding-top: 20px;
+  height: 550px;
+  padding-top: 50px;
+
   @media (min-width: 400px) {
     padding-top: 40px;
-    height: 350px;
+    height: 600px;
   }
   @media (min-width: 559px) {
-    height: 380px;
+    height: 700px;
+  }
+  @media (min-width: 880px) {
+    height: 600px;
   }
   @media (min-width: 1200px) {
-    height: 500px;
+    height: 800px;
   }
 `;
 
@@ -34,6 +38,7 @@ const StyledText = styled.h2`
   padding-top: 10px;
   font-family: "Hikou Regular";
   width: 70%;
+  margin-bottom: -30px;
   @media (min-width: 400px) {
     font-size: 2rem;
     letter-spacing: 0.7rem;
@@ -52,7 +57,8 @@ const StyledWave = styled.img`
   padding-top: 20px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0px;
+
+  opacity: 0.7;
   @media (min-width: 400px) {
     width: 65.7px;
   }
@@ -60,7 +66,7 @@ const StyledWave = styled.img`
 
 const IconsContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   margin: 40px auto 30px;
@@ -68,29 +74,8 @@ const IconsContainer = styled.div`
   @media (min-width: 400px) {
     margin-top: 50px;
   }
-`;
-
-const StyledIcons = styled.img`
-  height: 40px;
-  opacity: 0.6;
-  transition: all 0.2s;
-
-  & :hover {
-    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(129deg)
-      brightness(100%) contrast(90%);
-    height: 60px;
-  }
-  @media (min-width: 400px) {
-    height: 60px;
-    & :hover {
-      height: 80px;
-    }
-  }
-  @media (min-width: 559px) {
-    height: 85px;
-  }
-  @media (min-width: 1200px) {
-    height: 120px;
+  @media (min-width: 880px) {
+    flex-direction: row;
   }
 `;
 
@@ -100,13 +85,14 @@ const StyledItems = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5px 0;
   & p {
-    margin-top: 10px;
     display: flex;
     color: #cbcbcb;
-    font-family: "Hikou Outline";
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
+    font-family: "Hikou Regular";
+    opacity: 0.6;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
     @media (min-width: 400px) {
       font-size: 1.5rem;
     }
@@ -118,14 +104,6 @@ const StyledItems = styled.div`
       font-size: 2rem;
     }
   }
-  & :hover {
-    height: 80px;
-
-    & p {
-      font-family: "Hikou Regular";
-      color: #39847e;
-    }
-  }
 `;
 
 const GearIconsContainer = () => {
@@ -134,28 +112,33 @@ const GearIconsContainer = () => {
       <Container>
         <StyledWave src={SoundWave}></StyledWave>
         <StyledText>
-          Conocé
-          <br />
-          nuestros equipos
+          <a id="equipos">
+            Conocé
+            <br />
+            nuestros equipos
+          </a>
         </StyledText>
         <IconsContainer>
           <StyledItems>
-            <Link href="/categoria/microfonia">
-              <StyledIcons src={MicLogo}></StyledIcons>
-            </Link>
-            <p>Microfonía</p>
+            <GearIcons
+              link="/categoria/microfonia"
+              icono={MicLogo}
+              description="Microfonía"
+            />
           </StyledItems>
           <StyledItems>
-            <Link href="/categoria/guitarra">
-              <StyledIcons src={GuitarLogo}></StyledIcons>
-            </Link>
-            <p>Guitarras</p>
+            <GearIcons
+              link="/categoria/guitarra"
+              icono={GuitarLogo}
+              description="Guitarras"
+            />
           </StyledItems>
           <StyledItems>
-            <Link href="/categoria/general">
-              <StyledIcons src={GeneralLogo}></StyledIcons>
-            </Link>
-            <p>Generales</p>
+            <GearIcons
+              link="/categoria/general"
+              icono={GeneralLogo}
+              description="Generales"
+            />
           </StyledItems>
         </IconsContainer>
       </Container>

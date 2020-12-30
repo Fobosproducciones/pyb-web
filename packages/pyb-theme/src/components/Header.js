@@ -52,7 +52,6 @@ const Header = () => {
           <a href="/#trabajos">Trabajos</a>
           <a href="/#equipos">Equipos</a>
           <Link href="/contacto">Contacto</Link>
-          <Link href="/estudio">El Estudio</Link>
         </NavigationContentRight>
         <MenuButton />
       </NavigationBar>
